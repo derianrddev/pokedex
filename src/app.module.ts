@@ -5,6 +5,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { PokemonModule } from './pokemon/pokemon.module';
 import { CommonModule } from './common/common.module';
+import { AxiosAdapter } from './common/adapters/axios.adapter';
+import { SeedModule } from './seed/seed.module';
+import { IHttpAdapter } from './common/interfaces/http-adapter.interface';
 
 @Module({
   imports: [
@@ -13,7 +16,8 @@ import { CommonModule } from './common/common.module';
     }),
     MongooseModule.forRoot('mongodb://localhost:27017/pokedex'),
     PokemonModule,
-    CommonModule
+    CommonModule,
+    SeedModule
   ],
   controllers: [],
   providers: [],

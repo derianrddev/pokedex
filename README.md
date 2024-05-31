@@ -52,6 +52,11 @@ Ensure you have the following installed on your system:
    npm run start:dev
    ```
 
+4. **Rebuild the database with seed**
+   ```
+   http://localhost:3000/api/v2/seed
+   ```
+
 ## Technologies
 
 - Nest.js
