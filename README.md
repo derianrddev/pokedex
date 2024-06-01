@@ -25,34 +25,34 @@ Ensure you have the following installed on your system:
 
 ### Setup
 
-1. **Clone the Repository**
+1. Clone the Repository
 
    ```bash
    git clone https://github.com/derianrddev/pokedex.git
    cd pokedex
    ```
 
-2. **Install Dependencies**
+2. Install Dependencies
 
    ```bash
    npm install
    ```
 
-3. **Start the Application**
-
-    Use Docker Compose to build and start the application in detached mode:
-
-   ```bash
-   docker compose up -d
+3. Raise the database
+   ```
+   docker-compose up -d
    ```
 
-    Alternatively, you can start the application in development mode using npm:
+4. Clone the file ```.env.template``` and rename the copy to ```.env```.
 
-   ```bash
+5. Fill in the environment variables defined in the ```.env```.
+
+6. Run the application in dev:
+   ```
    npm run start:dev
    ```
 
-4. **Rebuild the database with seed**
+7. Rebuild the database with seed
    ```
    http://localhost:3000/api/v2/seed
    ```
